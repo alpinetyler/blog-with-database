@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-tyler:test123@cluster0.4xxae.mongodb.net/todolistDB", {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect("mongodb+srv://admin-tyler:test123@cluster0.4xxae.mongodb.net/blogDB", {useNewUrlParser: true, useUnifiedTopology: true})
 // added because of message: DeprecationWarning: Mongoose: `findOneAndUpdate()` and `findOneAndDelete()` without the `useFindAndModify` option set to false are deprecated. See: https://mongoosejs.com/docs/deprecations.html#findandmodify
 mongoose.set('useFindAndModify', false);
 
