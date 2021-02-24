@@ -79,6 +79,12 @@ app.get("/contact", function(req, res){
   res.render("contact", {contactContent: contactContent});
 });
 
-app.listen(3013 || process.env.PORT, function() {
-  console.log("Server started on port 3013");
+let port = process.env.PORT;
+if (port == null || port == ""){
+  port = 3017;
+}
+
+
+app.listen(port, function() {
+  console.log("Server started successfully");
 });
